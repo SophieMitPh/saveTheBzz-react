@@ -25,7 +25,6 @@ module.exports = (app) => {
 			error: false,
 			product
 		})
-
 	});
 
 	app.delete(`/api/product/:id`, async (req, res) => {
@@ -37,7 +36,6 @@ module.exports = (app) => {
 			error: false,
 			product
 		})
-
 	})
 
 }
