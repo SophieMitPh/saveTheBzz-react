@@ -9,12 +9,12 @@ function Home() {
 			</div>
 			<div className="button-container">
 				<div className="button-style">
-					<a href="products/productOverview">
+					<a href="products">
 						<button className="w3-button">Our products</button>
 					</a>
 				</div>
 				<div className="button-style">
-					<a href="products/new">
+					<a href="new">
 						<button className="w3-button">Add product!</button>
 					</a>
 				</div>
