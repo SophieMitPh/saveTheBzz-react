@@ -5,7 +5,6 @@ import AddProduct from './AddProduct';
 import Home from'./Home';
 import Header from './Header';
 
-
 class App extends React.Component {
     render() {
         return (
