@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ProductsOverview from './ProductsOverview';
+import ProductsIndex from './ProductIndex';
 import AddProduct from './AddProduct';
 import Home from'./Home';
 import Header from './Header';
@@ -13,8 +14,9 @@ class App extends React.Component {
             <Header/>
                 <Switch>
                     <Route path="/" component={Home} exact/>
-                    <Route path="/products" component={ProductsOverview}/>
-                    <Route path="/new" component={AddProduct}/>
+                    <Route exact path="/products" component={ProductsOverview}/>
+                    <Route exact path="/products/index" component={ProductsIndex}/>
+                    <Route path="/products/new" component={AddProduct}/>
                     <Route component={Error}/>
                 </Switch>
             </div>

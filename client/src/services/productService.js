@@ -9,5 +9,10 @@ export default {
 	newProduct: async (data) => {
 		let res = await axios.post(`/api/product`, data);
 		console.log(data);
+	},
+
+	remove: async (id, data) => {
+		await axios.delete(`/api/product/${id}`, data);
+		console.log(data);
 	}
 }

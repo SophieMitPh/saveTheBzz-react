@@ -14,7 +14,7 @@ function Home() {
 					</a>
 				</div>
 				<div className="button-style">
-					<a href="new">
+					<a href="products/new">
 						<button className="w3-button">Add product!</button>
 					</a>
 				</div>
