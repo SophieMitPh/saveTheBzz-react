@@ -15,7 +15,7 @@ function ProductsIndexItems(props) {
 				{props.description}
 			</td>
 			<td>
-				<a href="#">
+				<a href={`product/edit/${props.id}`}>
 					<button className="edit">Edit</button>
 				</a>
 			</td>
