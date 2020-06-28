@@ -1,5 +1,5 @@
 import React from "react";
-import './Home.css';
+import '../css/Home.css';
 
 function Home() {
 	return (
@@ -16,6 +16,11 @@ function Home() {
 				<div className="button-style">
 					<a href="product/new">
 						<button className="w3-button">Add product!</button>
+					</a>
+				</div>
+				<div className="button-style">
+					<a href="products/index">
+						<button className="w3-button">Delete and edit products</button>
 					</a>
 				</div>
 			</div>

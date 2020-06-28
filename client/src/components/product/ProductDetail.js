@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './AddProduct.css';
-import './product.css';
-import productService from './services/productService';
+import '../../css/product.css';
+import productService from './../../services/productService';
 
 const ProductDetail = (props) => {
 	const initialProductState = {
@@ -17,7 +16,6 @@ const ProductDetail = (props) => {
 		productService.getOne(id)
 			.then(response => {
 				setProduct(response.product);
-				console.log(response.product);
 			})
 			.catch(e => {
 				console.log(e);
@@ -39,7 +37,7 @@ const ProductDetail = (props) => {
 					</div>
 				<div className="detailView">
 					<div className="imgBorder">
-						<img className="product-image" src={`/${product.name}.png`} />
+						<img className="product-image" src={`/${product.name}.png`} alt="product" />
 					</div>
 					<div className="description-container">
 						<h2>Product info</h2>

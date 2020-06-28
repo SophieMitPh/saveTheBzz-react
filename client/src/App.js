@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ProductsOverview from './ProductsOverview';
-import ProductsIndex from './ProductIndex';
-import AddProduct from './AddProduct';
-import EditProduct from './editProduct';
-import ProductDetail from './ProductDetail';
-import Home from'./Home';
-import Header from './Header';
+import ProductsOverview from './components/product/ProductsOverview';
+import ProductsIndex from './components/product/ProductIndex';
+import AddProduct from './components/product/AddProduct';
+import EditProduct from './components/product/editProduct';
+import ProductDetail from './components/product/ProductDetail';
+import Home from './components/Home';
+import Header from './components/Header';
 
 class App extends React.Component {
     render() {

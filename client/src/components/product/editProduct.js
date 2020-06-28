@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import './AddProduct.css';
-import './signUp.css';
-import productService from './services/productService';
+import '../../css/AddProduct.css';
+import '../../css/signUp.css';
+import productService from './../../services/productService';
 
 const EditProduct = (props) => {
 	const initialProductState = {

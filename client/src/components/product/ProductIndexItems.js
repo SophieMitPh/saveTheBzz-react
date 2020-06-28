@@ -1,5 +1,5 @@
 import React from "react";
-import './cart.css';
+import '../../css/cart.css';
 
 function ProductsIndexItems(props) {
 
@@ -7,7 +7,7 @@ function ProductsIndexItems(props) {
 		<tbody>
 		<tr key={props.id}>
 			<td>
-				<a href="#">
+				<a href={`/product/detail/${props.id}`}>
 					{props.name}
 				</a>
 			</td>
@@ -15,13 +15,13 @@ function ProductsIndexItems(props) {
 				{props.description}
 			</td>
 			<td>
-				<a href={`product/edit/${props.id}`}>
+				<a href={`/product/edit/${props.id}`}>
 					<button className="edit">Edit</button>
 				</a>
 			</td>
 			<td>
 				<a href="#" onClick={props.handleDelete}>
-					<img className="bin-subscribers" src="/trash.png"/>
+					<img className="bin-subscribers" src="/trash.png" alt="trash icon"/>
 				</a>
 			</td>
 		</tr>

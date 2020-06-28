@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProductsIndexItems from './ProductIndexItems';
-import './cart.css';
+import '../../css/cart.css';
 
-// SERVICES
-import productService from './services/productService';
+import productService from './../../services/productService';
 
 function ProductsIndex() {
 	const [products, setProducts] = useState(null);

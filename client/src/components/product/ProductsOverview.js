@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
+import '../../App.css';
 
 // SERVICES
-import productService from './services/productService';
+import productService from './../../services/productService';
 
 function ProductsOverview() {
 	const [products, setproducts] = useState(null);
@@ -24,11 +24,11 @@ function ProductsOverview() {
 			<li key={product.name}>
 				<div className="imgBorder">
 					<a href={"/product/detail/" + product._id}>
-						<img className="product-image" src={product.name + ".png"}/>
+						<img className="product-image" src={product.name + ".png"} alt="product"/>
 						</a>
 					<div className="belowpic">
 						<h2 id="h2-item-name">{product.name}</h2>
-						<a href="/wishlist"><img className="wishlistIcon" src="wishList.png"/></a>
+						<a href="/"><img className="wishlistIcon" src="/wishList.png" alt="wishlist icon"/></a>
 					</div>
 				</div>
 			</li>

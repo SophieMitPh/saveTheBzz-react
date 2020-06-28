@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import './AddProduct.css';
-import productService from './services/productService';
+import '../../css/AddProduct.css';
+import productService from './../../services/productService';
 
 const AddProduct = () => {
 
@@ -8,7 +8,7 @@ const AddProduct = () => {
 		id: null,
 		name: '',
 		description: '',
-		price: null
+		price: ''
 	};
 
 	const [product, setProduct] = useState(initialProductState);
