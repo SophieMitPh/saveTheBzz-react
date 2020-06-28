@@ -5,7 +5,7 @@ const messages = document.getElementById('messages');
 (function() {
 	$("form").submit(function(e) {
 		let li = document.createElement("li");
-		e.preventDefault(); // prevents page reloading
+		e.preventDefault();
 		socket.emit("chat message", $("#message").val());
 
 		messages.appendChild(li).append($("#message").val());
@@ -29,7 +29,7 @@ const messages = document.getElementById('messages');
 
 // fetching initial chat messages from the database
 (function() {
-	fetch("/chats")
+	fetch("/api/chats")
 		.then(data => {
 			return data.json();
 		})

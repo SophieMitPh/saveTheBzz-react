@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Chats = require("./../models/Chat");
+const Chats = mongoose.model('chat');
 
 module.exports = (app) => {
 	app.get(`/api/chats`, async (req, res) => {
