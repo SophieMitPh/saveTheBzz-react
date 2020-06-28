@@ -6,13 +6,13 @@ export default {
 		return res.data || [];
 	},
 
-	get: async (id, data) => {
+	getOne: async (id, data) => {
 		let res = await axios.get(`/api/product/${id}`, data);
 		return res.data || {};
 	},
 
 	newProduct: async (data) => {
-		let res = await axios.post(`/api/product`, data);
+		await axios.post(`/api/product`, data);
 		console.log(data);
 	},
 

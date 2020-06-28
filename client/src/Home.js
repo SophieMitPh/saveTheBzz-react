@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './Home.css';
 
 function Home() {
@@ -16,11 +16,6 @@ function Home() {
 				<div className="button-style">
 					<a href="product/new">
 						<button className="w3-button">Add product!</button>
-					</a>
-				</div>
-				<div className="button-style">
-					<a href="subscribers/new">
-						<button className="w3-button">Subscribe to our newsletter!</button>
 					</a>
 				</div>
 			</div>

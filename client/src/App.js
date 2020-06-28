@@ -4,6 +4,7 @@ import ProductsOverview from './ProductsOverview';
 import ProductsIndex from './ProductIndex';
 import AddProduct from './AddProduct';
 import EditProduct from './editProduct';
+import ProductDetail from './ProductDetail';
 import Home from'./Home';
 import Header from './Header';
 
@@ -19,6 +20,7 @@ class App extends React.Component {
                     <Route exact path="/products/index" component={ProductsIndex}/>
                     <Route path="/product/new" component={AddProduct}/>
                     <Route path="/product/edit/:id" component={EditProduct}/>
+                    <Route path="/product/detail/:id" component={ProductDetail}/>
                     <Route component={Error}/>
                 </Switch>
             </div>

@@ -14,12 +14,10 @@ const EditProduct = (props) => {
 	const [product, setProduct] = useState(initialProductState);
 
 	const getProduct = (id) => {
-		productService.get(id)
+		productService.getOne(id)
 			.then(response => {
-				setProduct({
-					product: response.data
-				});
-				console.log(response.data);
+				setProduct(response.product);
+				console.log(response.product);
 			})
 			.catch(e => {
 				console.log(e);
@@ -38,7 +36,7 @@ const EditProduct = (props) => {
 	const updateProduct = () => {
 		productService.update(product.id, product)
 			.then(response => {
-				console.log(response.data);
+				console.log(response);
 			})
 			.catch(e => {
 				console.log(e);
@@ -51,10 +49,10 @@ const EditProduct = (props) => {
 				<div className="data-form">
 				<form>
 					<h2>Edit product:</h2>
-					<label htmlFor="inputName">{product.name}</label>
-					<input type="text" name="name" value="Enter the new name" placeholder={product.name} onChange={handleInputChange} autoFocus/>
+					<label htmlFor="inputName">Name</label>
+					<input type="text" name="name" value={product.name} placeholder="Hi" onChange={handleInputChange} autoFocus/>
 						<label htmlFor="inputDescription">Description</label>
-						<input type="text" name="description" value="Enter the new description"
+						<input type="text" name="description" value={product.description}
 						       placeholder="Description" onChange={handleInputChange} autoFocus/>
 							<label htmlFor="inputPrice">Price</label>
 							<input type="text" name="price" value={product.price} placeholder="Enter the new price" onChange={handleInputChange} autoFocus/>

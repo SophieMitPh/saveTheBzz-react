@@ -7,6 +7,17 @@ module.exports = (app) => {
 		return res.status(200).send(products);
 	});
 
+	app.get(`/api/product/:id`, async (req, res) => {
+		const {id} = req.params;
+
+		let product = await Product.findById(id);
+
+		return res.status(201).send({
+			error: false,
+			product
+		})
+	});
+
 	app.post(`/api/product`, async (req, res) => {
 		let product = await Product.create(req.body);
 		return res.status(201).send({

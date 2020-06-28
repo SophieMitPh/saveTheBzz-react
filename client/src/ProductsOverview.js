@@ -23,7 +23,7 @@ function ProductsOverview() {
 		return (
 			<li key={product.name}>
 				<div className="imgBorder">
-					<a href={"/products/product/" + product.name}>
+					<a href={"/product/detail/" + product._id}>
 						<img className="product-image" src={product.name + ".png"}/>
 						</a>
 					<div className="belowpic">

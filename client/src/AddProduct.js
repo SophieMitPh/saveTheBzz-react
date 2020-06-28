@@ -12,7 +12,6 @@ const AddProduct = () => {
 	};
 
 	const [product, setProduct] = useState(initialProductState);
-	const [submitted, setSubmitted] = useState(false);
 
 	const handleInputChange = event => {
 		const { name, value } = event.target;
@@ -34,17 +33,11 @@ const AddProduct = () => {
 					description: response.data.description,
 					price: response.data.price
 				});
-				setSubmitted(true);
 				console.log(response.data);
 			})
 			.catch(e => {
 				console.log(e);
 			});
-	};
-
-	const newProduct = () => {
-		setProduct(initialProductState);
-		setSubmitted(false);
 	};
 
 	return (
