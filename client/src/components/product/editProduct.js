@@ -8,7 +8,7 @@ const EditProduct = (props) => {
 		id: null,
 		name: "",
 		description: "",
-		price: null
+		price: ""
 	};
 
 	const [product, setProduct] = useState(initialProductState);
@@ -34,9 +34,9 @@ const EditProduct = (props) => {
 	};
 
 	const updateProduct = () => {
-		productService.update(product.id, product)
+		productService.update(product._id, product)
 			.then(response => {
-				console.log(response);
+				console.log(response.data);
 			})
 			.catch(e => {
 				console.log(e);
@@ -47,7 +47,7 @@ const EditProduct = (props) => {
 		<div className="background">
 			{product ? (
 				<div className="data-form">
-				<form>
+				<form onSubmit={updateProduct}>
 					<h2>Edit product:</h2>
 					<label htmlFor="inputName">Name</label>
 					<input type="text" name="name" value={product.name} placeholder="Hi" onChange={handleInputChange} autoFocus/>
@@ -56,7 +56,7 @@ const EditProduct = (props) => {
 						       placeholder="Description" onChange={handleInputChange} autoFocus/>
 							<label htmlFor="inputPrice">Price</label>
 							<input type="text" name="price" value={product.price} placeholder="Enter the new price" onChange={handleInputChange} autoFocus/>
-								<button type="submit" onClick={updateProduct}>Update</button>
+								<button type="submit">Update</button>
 				</form>
 			</div> ) : (
 				<p> Something went wrong. We could not find the product. </p>)}

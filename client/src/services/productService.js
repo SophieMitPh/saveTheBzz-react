@@ -20,7 +20,6 @@ export default {
 		await axios.delete(`/api/product/${id}`);
 	},
 	update: async (id, data) => {
-		let res = await axios.put(`/api/product/${id}`, data);
-		return res.data || {};
+		await axios.put(`/api/product/${id}`, data);
 	}
 }
