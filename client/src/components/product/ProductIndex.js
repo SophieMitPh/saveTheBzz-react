@@ -26,12 +26,12 @@ function ProductsIndex() {
 	}
 
 	return (
-	<div class="main">
-		<div class="pageTitle">
+	<div className="main">
+		<div className="pageTitle">
 			<h1>Our Products</h1>
 		</div>
-		<div class="cart-container">
-			<table class="table">
+		<div className="cart-container">
+			<table className="table">
 				<thead>
 				<tr>
 					<th>Name</th>

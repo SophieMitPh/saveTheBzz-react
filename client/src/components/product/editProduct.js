@@ -33,10 +33,12 @@ const EditProduct = (props) => {
 		setProduct({ ...product, [name]: value })
 	};
 
-	const updateProduct = () => {
+	const updateProduct = (e) => {
+		e.preventDefault();
 		productService.update(product._id, product)
 			.then(response => {
-				console.log(response.data);
+				console.log(response);
+				props.history.push('/products/index');
 			})
 			.catch(e => {
 				console.log(e);
@@ -47,7 +49,7 @@ const EditProduct = (props) => {
 		<div className="background">
 			{product ? (
 				<div className="data-form">
-				<form onSubmit={updateProduct}>
+				<form onSubmit={ (e) => updateProduct(e)}>
 					<h2>Edit product:</h2>
 					<label htmlFor="inputName">Name</label>
 					<input type="text" name="name" value={product.name} placeholder="Hi" onChange={handleInputChange} autoFocus/>
