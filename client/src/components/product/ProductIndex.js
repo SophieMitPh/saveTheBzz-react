@@ -36,13 +36,12 @@ function ProductsIndex() {
 				<tr>
 					<th>Name</th>
 					<th>Description</th>
-					<th>Edit</th>
-					<th>Delete</th>
+					<th>Price</th>
 				</tr>
 				</thead>
 				{(products && products.length > 0) ? (
 					products.map((product) =>
-						<ProductsIndexItems id={product._id} name={product.name} description={product.description} handleDelete={() => handleDelete(product._id)}/>)
+						<ProductsIndexItems id={product._id} name={product.name} description={product.description} price={product.price} handleDelete={() => handleDelete(product._id)}/>)
 				) : (
 					<h3>No products found</h3>
 				)}

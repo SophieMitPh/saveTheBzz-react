@@ -15,6 +15,9 @@ function ProductsIndexItems(props) {
 				{props.description}
 			</td>
 			<td>
+				{props.price} €
+			</td>
+			<td>
 				<a href={`/product/edit/${props.id}`}>
 					<button className="edit">Edit</button>
 				</a>
