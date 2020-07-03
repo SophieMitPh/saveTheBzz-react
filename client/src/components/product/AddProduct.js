@@ -45,7 +45,7 @@ const AddProduct = () => {
 		<h2>Add a new product to your webshop!</h2>
 			<div className="signUpRectangle">
 				<form className="form-container">
-					<input type="text" value={product.name} onChange={handleInputChange} placeholder="Product Name" name="name" required/>
+					<input id="nameValue" type="text" value={product.name} onChange={handleInputChange} placeholder="Product Name" name="name" required/>
 						<textarea type="text" value={product.description} onChange={handleInputChange} placeholder="Description" name="description" required/>
 						<input value={product.price} onChange={handleInputChange} placeholder="Price" name="price" required />
 						<button type="submit" onClick={saveProduct} id="signup-button">ADD THIS PRODUCT</button>

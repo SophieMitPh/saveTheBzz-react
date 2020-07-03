@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add product page should match the snapshot 1`] = `"<div><h2>Add a new product to your webshop!</h2><div class=\\"signUpRectangle\\"><form class=\\"form-container\\"><input type=\\"text\\" id=\\"nameValue\\" value=\\"\\" placeholder=\\"Product Name\\" name=\\"name\\" required=\\"\\"/><textarea type=\\"text\\" placeholder=\\"Description\\" name=\\"description\\" required=\\"\\"></textarea><input value=\\"\\" placeholder=\\"Price\\" name=\\"price\\" required=\\"\\"/><button type=\\"submit\\" id=\\"signup-button\\">ADD THIS PRODUCT</button></form></div></div>"`;
+
+exports[`Add product page should render correctly in "debug" mode 1`] = `
+<div>
+  <h2>
+    Add a new product to your webshop!
+  </h2>
+  <div
+    className="signUpRectangle"
+  >
+    <form
+      className="form-container"
+    >
+      <input
+        id="nameValue"
+        name="name"
+        onChange={[Function]}
+        placeholder="Product Name"
+        required={true}
+        type="text"
+        value=""
+      />
+      <textarea
+        name="description"
+        onChange={[Function]}
+        placeholder="Description"
+        required={true}
+        type="text"
+        value=""
+      />
+      <input
+        name="price"
+        onChange={[Function]}
+        placeholder="Price"
+        required={true}
+        value=""
+      />
+      <button
+        id="signup-button"
+        onClick={[Function]}
+        type="submit"
+      >
+        ADD THIS PRODUCT
+      </button>
+    </form>
+  </div>
+</div>
+`;
